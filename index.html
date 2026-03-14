@@ -75,32 +75,58 @@
             padding: 40px 20px;
             background-color: #3c2a5e;
         }
-        #chat button {
-            background-color: #8b008b;
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background-color: #25D366; /* WhatsApp green */
             color: white;
             border: none;
-            padding: 15px 30px;
+            padding: 14px 28px;
             font-size: 1.2em;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
-        #chat button:hover {
-            background-color: #ba55d3;
+        .contact-btn.facebook {
+            background-color: #1877F2; /* Facebook blue */
+        }
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+        }
+        .contact-btn img {
+            width: 32px;
+            height: 32px;
         }
         footer {
             background-color: #1a0d2b;
-            padding: 20px;
+            padding: 30px 20px;
             text-align: center;
+        }
+        footer .social-links {
+            margin: 20px 0;
         }
         footer a {
             color: #ba55d3;
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
-            font-size: 1.2em;
+            font-size: 1.4em;
         }
         footer a:hover {
-            text-decoration: underline;
+            color: #ffffff;
+        }
+        footer p {
+            margin-top: 20px;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -152,15 +178,25 @@
 
     <section id="chat">
         <h2>Ready to Discover Your Future?</h2>
-        <button onclick="alert('Chat feature coming soon!');">Chat Me</button>
-        <p>Click the button above to start a conversation with our experts.</p>
+        <div class="contact-buttons">
+            <a href="https://wa.me/message/CIR62CLUMQ7YA1" target="_blank" class="contact-btn">
+                <img src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png" alt="WhatsApp">
+                Chat on WhatsApp
+            </a>
+            <a href="https://www.facebook.com/share/1KeWsP6JMX/?mibextid=wwXIfr" target="_blank" class="contact-btn facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Facebook_f_logo_%282021%29.svg" alt="Facebook">
+                Message on Facebook
+            </a>
+        </div>
+        <p>Click the buttons above to connect with us instantly.</p>
     </section>
 
     <footer>
-        <p>Follow Us on Social Media</p>
-        <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
-        <a href="https://facebook.com/yourhandle" target="_blank">Facebook</a>
-        <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a>
+        <div class="social-links">
+            <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+            <a href="https://facebook.com/yourhandle" target="_blank">Facebook</a>
+            <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a>
+        </div>
         <p>&copy; 2026 Mystic Insights. All rights reserved.</p>
     </footer>
 </body>
