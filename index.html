@@ -90,7 +90,6 @@
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            background-color: #25D366; /* WhatsApp green */
             color: white;
             border: none;
             padding: 14px 28px;
@@ -100,8 +99,14 @@
             transition: all 0.3s;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
+        .contact-btn.whatsapp {
+            background-color: #25D366; /* WhatsApp green */
+        }
         .contact-btn.facebook {
             background-color: #1877F2; /* Facebook blue */
+        }
+        .contact-btn.tiktok {
+            background: linear-gradient(45deg, #ee1d52, #000000); /* TikTok red-to-black gradient */
         }
         .contact-btn:hover {
             transform: translateY(-3px);
@@ -183,23 +188,22 @@
 
     <section id="contact">
         <h2>Connect With Us Now</h2>
-        <p>Book your personal reading or ask any questions via live chat, WhatsApp, or Facebook Messenger.</p>
+        <p>Book your personal reading or ask any questions via live chat, WhatsApp, Facebook, or TikTok.</p>
 
         <!-- tawk.to Live Chat Widget - Replace YOUR_PROPERTY_ID with your actual tawk.to Property ID -->
         <!-- 
             How to get your code:
             1. Go to https://www.tawk.to/
-            2. Sign up for a free account (100% free forever for core features)
-            3. After dashboard setup, go to Administration → Channels → Chat Widget
-            4. Copy the provided JavaScript snippet and replace the one below
-            5. The widget will appear in the bottom-right corner automatically
+            2. Sign up for a free account
+            3. After setup, go to Administration → Channels → Chat Widget
+            4. Copy the JavaScript snippet and replace the one below
         -->
         <script type="text/javascript">
         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
         (function(){
         var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
         s1.async=true;
-        s1.src='https://embed.tawk.to/YOUR_PROPERTY_ID/default';  // ← Replace YOUR_PROPERTY_ID here (e.g. 66f...123)
+        s1.src='https://embed.tawk.to/YOUR_PROPERTY_ID/default';  // ← Replace YOUR_PROPERTY_ID here
         s1.charset='UTF-8';
         s1.setAttribute('crossorigin','*');
         s0.parentNode.insertBefore(s1,s0);
@@ -207,13 +211,17 @@
         </script>
 
         <div class="contact-buttons">
-            <a href="https://wa.me/message/CIR62CLUMQ7YA1" target="_blank" class="contact-btn">
+            <a href="https://wa.me/message/CIR62CLUMQ7YA1" target="_blank" class="contact-btn whatsapp">
                 <img src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png" alt="WhatsApp">
                 Chat on WhatsApp
             </a>
             <a href="https://www.facebook.com/share/1KeWsP6JMX/?mibextid=wwXIfr" target="_blank" class="contact-btn facebook">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Facebook_f_logo_%282021%29.svg" alt="Facebook">
                 Message on Facebook
+            </a>
+            <a href="https://www.tiktok.com/@dr..ambrose.medium" target="_blank" class="contact-btn tiktok">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/TikTok_%28icon%29.svg" alt="TikTok">
+                Follow on TikTok
             </a>
         </div>
     </section>
@@ -223,6 +231,7 @@
             <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
             <a href="https://facebook.com/yourhandle" target="_blank">Facebook</a>
             <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@dr..ambrose.medium" target="_blank">TikTok</a>
         </div>
         <p>&copy; 2026 Mystic Insights. All rights reserved.</p>
     </footer>
