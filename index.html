@@ -70,17 +70,21 @@
             margin-top: 10px;
             font-weight: bold;
         }
-        #chat {
+        #contact {
             text-align: center;
-            padding: 40px 20px;
+            padding: 60px 20px;
             background-color: #3c2a5e;
+        }
+        #contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
         .contact-buttons {
             display: flex;
             justify-content: center;
             gap: 30px;
             flex-wrap: wrap;
-            margin: 30px 0;
+            margin: 30px 0 50px;
         }
         .contact-btn {
             display: inline-flex;
@@ -131,6 +135,7 @@
     </style>
 </head>
 <body>
+
     <header>
         <h1>Mystic Insights</h1>
         <p>Your Gateway to Astrology, Psychic, and Medium Readings</p>
@@ -176,8 +181,31 @@
         </div>
     </section>
 
-    <section id="chat">
-        <h2>Ready to Discover Your Future?</h2>
+    <section id="contact">
+        <h2>Connect With Us Now</h2>
+        <p>Book your personal reading or ask any questions via live chat, WhatsApp, or Facebook Messenger.</p>
+
+        <!-- tawk.to Live Chat Widget - Replace YOUR_PROPERTY_ID with your actual tawk.to Property ID -->
+        <!-- 
+            How to get your code:
+            1. Go to https://www.tawk.to/
+            2. Sign up for a free account (100% free forever for core features)
+            3. After dashboard setup, go to Administration → Channels → Chat Widget
+            4. Copy the provided JavaScript snippet and replace the one below
+            5. The widget will appear in the bottom-right corner automatically
+        -->
+        <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/YOUR_PROPERTY_ID/default';  // ← Replace YOUR_PROPERTY_ID here (e.g. 66f...123)
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+        </script>
+
         <div class="contact-buttons">
             <a href="https://wa.me/message/CIR62CLUMQ7YA1" target="_blank" class="contact-btn">
                 <img src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png" alt="WhatsApp">
@@ -188,7 +216,6 @@
                 Message on Facebook
             </a>
         </div>
-        <p>Click the buttons above to connect with us instantly.</p>
     </section>
 
     <footer>
@@ -199,5 +226,6 @@
         </div>
         <p>&copy; 2026 Mystic Insights. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
